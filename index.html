@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechZone — Gadget Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Ambient animated background -->
+<div class="bg-fx" aria-hidden="true">
+  <span class="blob blob-a"></span>
+  <span class="blob blob-b"></span>
+  <span class="blob blob-c"></span>
+  <span class="grain"></span>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark">◈</span> TechZone
+    </a>
+    <nav class="nav-links">
+      <a href="#smartphones">Smartphones</a>
+      <a href="#laptops">Laptops</a>
+      <a href="#audio">Audio</a>
+      <a href="#wearables">Wearables</a>
+      <a href="#gaming">Gaming</a>
+      <a href="#offers" class="nav-offer">Offers</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="acctBtn" aria-label="Account">
+        <svg viewBox="0 0 24 24"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 21c1.4-4 4.6-6 8-6s6.6 2 8 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="acct-label" id="acctLabel">Sign in</span>
+      </button>
+      <button class="icon-btn" id="cartBtn" aria-label="Cart">
+        <svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.8h7.2a2 2 0 0 0 2-1.6L20 8H6.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="20.5" r="1.4" fill="currentColor"/><circle cx="17" cy="20.5" r="1.4" fill="currentColor"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-grid" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow">TECHZONE / GADGET STORE</p>
+    <h1 class="hero-title">Your next<br><span class="accent-text">upgrade</span><br>is on display.</h1>
+    <p class="hero-sub">Phones, laptops, audio, wearables and gaming gear — picked, tested,
+      and priced fairly. Add what you like to the cart, no account needed to browse.</p>
+    <div class="hero-cta">
+      <a href="#offers" class="btn btn-primary">See special offers</a>
+      <a href="#smartphones" class="btn btn-ghost">Browse catalog ↓</a>
+    </div>
+    <ul class="trust-strip">
+      <li>↺ Free 14-day returns</li>
+      <li>⚿ Secure checkout</li>
+      <li>⌁ Ships in 2–4 days</li>
+    </ul>
+  </div>
+
+  <div class="hero-stage" id="stage">
+    <div class="stage-perspective">
+      <div class="ring" id="ring">
+        <div class="chip" data-depth="1"><svg viewBox="0 0 64 64"><use href="#icon-nova-x12"/></svg><span>Nova X12 Pro</span></div>
+        <div class="chip" data-depth="2"><svg viewBox="0 0 64 64"><use href="#icon-aerobook-14"/></svg><span>AeroBook 14</span></div>
+        <div class="chip" data-depth="3"><svg viewBox="0 0 64 64"><use href="#icon-echobuds-pro"/></svg><span>EchoBuds Pro</span></div>
+        <div class="chip" data-depth="4"><svg viewBox="0 0 64 64"><use href="#icon-pulsefit-se"/></svg><span>PulseFit SE</span></div>
+        <div class="chip" data-depth="5"><svg viewBox="0 0 64 64"><use href="#icon-strikepad-pro"/></svg><span>StrikePad Pro</span></div>
+        <div class="chip" data-depth="6"><svg viewBox="0 0 64 64"><use href="#icon-sonicwave"/></svg><span>SonicWave</span></div>
+      </div>
+      <div class="ring-shadow"></div>
+    </div>
+    <p class="stage-hint">Drag to spin the shelf</p>
+  </div>
+</section>
+
+<!-- ============ OFFERS TICKER ============ -->
+<section class="ticker" id="offers">
+  <div class="ticker-track">
+    <span>⚡ EchoBuds Pro ANC — 20% OFF this week</span>
+    <span>🆕 NeonGlow Mechanical Keyboard — just landed</span>
+    <span>⚡ Free case with every Orbit Fold 3 pre-order</span>
+    <span>🆕 VitalTrack Pro now shipping</span>
+    <span>⚡ EchoBuds Pro ANC — 20% OFF this week</span>
+    <span>🆕 NeonGlow Mechanical Keyboard — just landed</span>
+    <span>⚡ Free case with every Orbit Fold 3 pre-order</span>
+    <span>🆕 VitalTrack Pro now shipping</span>
+  </div>
+</section>
+
+<!-- ============ SVG ICON SPRITE (hidden) ============ -->
+<svg style="display:none">
+  <defs>
+    <!-- Smartphones -->
+    <g id="icon-nova-x12"><rect x="20" y="5" width="24" height="54" rx="5" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="47" x2="44" y2="47" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="53" r="1.6" fill="currentColor"/><circle cx="26" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="32" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="38" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/></g>
+    <g id="icon-pulse-lite"><rect x="21" y="8" width="22" height="48" rx="5" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="21" y1="46" x2="43" y2="46" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="51" r="1.5" fill="currentColor"/><circle cx="32" cy="14" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/></g>
+    <g id="icon-orbit-fold"><path d="M10 14 h18 v36 h-18 Z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M36 10 h18 v44 h-18 Z" fill="none" stroke="currentColor" stroke-width="2.5" transform="rotate(8 45 32)"/><line x1="28" y1="20" x2="28" y2="44" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 3"/></g>
+
+    <!-- Laptops -->
+    <g id="icon-aerobook-14"><rect x="10" y="15" width="44" height="26" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 46 h54 l-3.5 7 H8.5 Z" fill="none" stroke="currentColor" stroke-width="2"/><line x1="15" y1="20" x2="49" y2="20" stroke="currentColor" stroke-width="1.2" opacity=".5"/></g>
+    <g id="icon-titanforce-16"><rect x="8" y="13" width="48" height="29" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M4 47 h56 l-4 8 H8 Z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M14 47 l3 4 l3 -4 l3 4 l3 -4 l3 4 l3 -4 l3 4 l3 -4 l3 4 l3 -4" fill="none" stroke="currentColor" stroke-width="1.4"/></g>
+    <g id="icon-slimair-13"><rect x="12" y="19" width="40" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 43 h48 l-3 5 H11 Z" fill="none" stroke="currentColor" stroke-width="2"/></g>
+
+    <!-- Audio -->
+    <g id="icon-echobuds-pro"><rect x="14" y="20" width="16" height="26" rx="8" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="34" y="20" width="16" height="26" rx="8" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="22" cy="14" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="42" cy="14" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 30 a2.5 2.5 0 0 1 5 0" fill="none" stroke="currentColor" stroke-width="1.3" opacity=".6"/></g>
+    <g id="icon-sonicwave"><path d="M12 34 v-4 a20 20 0 0 1 40 0 v4" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="8" y="32" width="10" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="46" y="32" width="10" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M24 24 a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="1.3" opacity=".5"/></g>
+    <g id="icon-basscore"><circle cx="20" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M20 32 q-2 12 2 20" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="44" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M44 32 q2 12 -2 20" fill="none" stroke="currentColor" stroke-width="2.5"/></g>
+
+    <!-- Wearables -->
+    <g id="icon-pulsefit-se"><rect x="20" y="18" width="24" height="28" rx="7" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M26 18 V10 h12 v8 M26 46 v8 h12 v-8" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="32" y1="26" x2="32" y2="32" stroke="currentColor" stroke-width="2"/><line x1="32" y1="32" x2="36" y2="34" stroke="currentColor" stroke-width="2"/></g>
+    <g id="icon-orbitband-2"><rect x="18" y="24" width="28" height="16" rx="8" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="24" y="28" width="16" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M18 32 h-6 M46 32 h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></g>
+    <g id="icon-vitaltrack-pro"><circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 4" opacity=".55"/><rect x="21" y="19" width="22" height="26" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M27 19 V12 h10 v7 M27 45 v7 h10 v-7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="32" cy="32" r="2" fill="currentColor"/></g>
+
+    <!-- Gaming -->
+    <g id="icon-strikepad-pro"><rect x="8" y="24" width="48" height="20" rx="10" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="22" cy="34" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="44" cy="30" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="48" cy="36" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/><line x1="20" y1="34" x2="24" y2="34" stroke="currentColor" stroke-width="1.6"/><line x1="22" y1="32" x2="22" y2="36" stroke="currentColor" stroke-width="1.6"/></g>
+    <g id="icon-neonglow-kb"><rect x="6" y="20" width="52" height="26" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <rect x="11" y="25" width="5" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="19" y="25" width="5" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="27" y="25" width="5" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="35" y="25" width="5" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="43" y="25" width="10" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <rect x="11" y="33" width="5" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="19" y="33" width="5" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="27" y="33" width="5" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="35" y="33" width="18" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.3"/></g>
+    <g id="icon-hyperaim-mouse"><path d="M32 14 c10 0 16 8 16 20 c0 12 -7 18 -16 18 c-9 0 -16 -6 -16 -18 c0 -12 6 -20 16 -20 Z" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="32" y1="14" x2="32" y2="30" stroke="currentColor" stroke-width="1.6"/><line x1="24" y1="18" x2="27" y2="24" stroke="currentColor" stroke-width="1.4" opacity=".5"/><rect x="30" y="18" width="4" height="8" rx="2" fill="currentColor" opacity=".5"/></g>
+
+    <g id="icon-cart"><path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.8h7.2a2 2 0 0 0 2-1.6L20 8H6.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9.5" cy="20.5" r="1.4" fill="currentColor"/><circle cx="17" cy="20.5" r="1.4" fill="currentColor"/></g>
+  </defs>
+</svg>
+
+<!-- ============ MAIN CATALOG ============ -->
+<main>
+
+  <!-- SMARTPHONES -->
+  <section class="category" id="smartphones">
+    <div class="cat-head">
+      <p class="eyebrow">CAT / 01</p>
+      <h2>Smartphones</h2>
+      <p class="cat-desc">Flagship power, everyday value, and the fold-out future — pick your daily driver.</p>
+    </div>
+    <div class="product-grid">
+
+      <article class="card" data-tilt>
+        <div class="card-badge badge-new">New</div>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-nova-x12"/></svg></div>
+        <h3>Nova X12 Pro</h3>
+        <p class="desc">6.7" flagship display, triple camera system, all-day battery life.</p>
+        <div class="card-foot">
+          <span class="price">$899</span>
+          <span class="stock in-stock">In stock</span>
+        </div>
+        <button class="add-cart" data-id="nova-x12" data-name="Nova X12 Pro" data-price="899">Add to cart</button>
+      </article>
+
+      <article class="card" data-tilt>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-pulse-lite"/></svg></div>
+        <h3>Pulse Lite 5G</h3>
+        <p class="desc">Fast 5G connectivity in a budget-friendly, compact body.</p>
+        <div class="card-foot">
+          <span class="price">$349</span>
+          <span class="stock in-stock">In stock</span>
+        </div>
+        <button class="add-cart" data-id="pulse-lite" data-name="Pulse Lite 5G" data-price="349">Add to cart</button>
+      </article>
+
+      <article class="card" data-tilt>
+        <div class="card-badge badge-pre">Pre-order</div>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-orbit-fold"/></svg></div>
+        <h3>Orbit Fold 3</h3>
+        <p class="desc">Book-style foldable with a tablet-sized inner screen.</p>
+        <div class="card-foot">
+          <span class="price">$1,499</span>
+          <span class="stock pre-order">Ships in 3 weeks</span>
+        </div>
+        <button class="add-cart" data-id="orbit-fold" data-name="Orbit Fold 3" data-price="1499">Add to cart</button>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- LAPTOPS -->
+  <section class="category alt" id="laptops">
+    <div class="cat-head">
+      <p class="eyebrow">CAT / 02</p>
+      <h2>Laptops</h2>
+      <p class="cat-desc">Thin-and-light workhorses to full-tower gaming rigs you can fold shut.</p>
+    </div>
+    <div class="product-grid">
+
+      <article class="card" data-tilt>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-aerobook-14"/></svg></div>
+        <h3>AeroBook 14 Ultra</h3>
+        <p class="desc">14" ultralight chassis built for travel and long work days.</p>
+        <div class="card-foot">
+          <span class="price">$1,199</span>
+          <span class="stock in-stock">In stock</span>
+        </div>
+        <button class="add-cart" data-id="aerobook-14" data-name="AeroBook 14 Ultra" data-price="1199">Add to cart</button>
+      </article>
+
+      <article class="card" data-tilt>
+        <div class="card-badge badge-low">Low stock</div>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-titanforce-16"/></svg></div>
+        <h3>TitanForce Gaming 16</h3>
+        <p class="desc">16" 165Hz display with high-end graphics for serious gaming.</p>
+        <div class="card-foot">
+          <span class="price">$1,799</span>
+          <span class="stock low-stock">Only 4 left</span>
+        </div>
+        <button class="add-cart" data-id="titanforce-16" data-name="TitanForce Gaming 16" data-price="1799">Add to cart</button>
+      </article>
+
+      <article class="card" data-tilt>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-slimair-13"/></svg></div>
+        <h3>SlimAir 13</h3>
+        <p class="desc">Fanless, silent design with a full day of battery life.</p>
+        <div class="card-foot">
+          <span class="price">$899</span>
+          <span class="stock in-stock">In stock</span>
+        </div>
+        <button class="add-cart" data-id="slimair-13" data-name="SlimAir 13" data-price="899">Add to cart</button>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- AUDIO -->
+  <section class="category" id="audio">
+    <div class="cat-head">
+      <p class="eyebrow">CAT / 03</p>
+      <h2>Audio &amp; Headphones</h2>
+      <p class="cat-desc">From gym-ready earbuds to studio-grade over-ears.</p>
+    </div>
+    <div class="product-grid">
+
+      <article class="card" data-tilt>
+        <div class="card-badge badge-sale">-20%</div>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-echobuds-pro"/></svg></div>
+        <h3>EchoBuds Pro ANC</h3>
+        <p class="desc">Active noise cancellation with a snug, secure fit.</p>
+        <div class="card-foot">
+          <span class="price">$179 <s>$224</s></span>
+          <span class="stock in-stock">In stock</span>
+        </div>
+        <button class="add-cart" data-id="echobuds-pro" data-name="EchoBuds Pro ANC" data-price="179">Add to cart</button>
+      </article>
+
+      <article class="card" data-tilt>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-sonicwave"/></svg></div>
+        <h3>SonicWave Over-Ear</h3>
+        <p class="desc">Studio-tuned sound with plush, all-day comfort padding.</p>
+        <div class="card-foot">
+          <span class="price">$249</span>
+          <span class="stock in-stock">In stock</span>
+        </div>
+        <button class="add-cart" data-id="sonicwave" data-name="SonicWave Over-Ear" data-price="249">Add to cart</button>
+      </article>
+
+      <article class="card" data-tilt>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-basscore"/></svg></div>
+        <h3>BassCore Wireless Earbuds</h3>
+        <p class="desc">Punchy bass and a compact charging case for daily commutes.</p>
+        <div class="card-foot">
+          <span class="price">$89</span>
+          <span class="stock in-stock">In stock</span>
+        </div>
+        <button class="add-cart" data-id="basscore" data-name="BassCore Wireless Earbuds" data-price="89">Add to cart</button>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- WEARABLES -->
+  <section class="category alt" id="wearables">
+    <div class="cat-head">
+      <p class="eyebrow">CAT / 04</p>
+      <h2>Smartwatches &amp; Wearables</h2>
+      <p class="cat-desc">Track workouts, sleep, and notifications from your wrist.</p>
+    </div>
+    <div class="product-grid">
+
+      <article class="card" data-tilt>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-pulsefit-se"/></svg></div>
+        <h3>PulseFit Watch SE</h3>
+        <p class="desc">Heart-rate and sleep tracking in a lightweight aluminum case.</p>
+        <div class="card-foot">
+          <span class="price">$199</span>
+          <span class="stock in-stock">In stock</span>
+        </div>
+        <button class="add-cart" data-id="pulsefit-se" data-name="PulseFit Watch SE" data-price="199">Add to cart</button>
+      </article>
+
+      <article class="card" data-tilt>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-orbitband-2"/></svg></div>
+        <h3>OrbitBand 2</h3>
+        <p class="desc">Slim fitness band with a two-week battery life.</p>
+        <div class="card-foot">
+          <span class="price">$129</span>
+          <span class="stock in-stock">In stock</span>
+        </div>
+        <button class="add-cart" data-id="orbitband-2" data-name="OrbitBand 2" data-price="129">Add to cart</button>
+      </article>
+
+      <article class="card" data-tilt>
+        <div class="card-badge badge-new">New</div>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-vitaltrack-pro"/></svg></div>
+        <h3>VitalTrack Pro</h3>
+        <p class="desc">Built-in GPS and blood-oxygen sensor for serious training.</p>
+        <div class="card-foot">
+          <span class="price">$299</span>
+          <span class="stock low-stock">Just landed</span>
+        </div>
+        <button class="add-cart" data-id="vitaltrack-pro" data-name="VitalTrack Pro" data-price="299">Add to cart</button>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- GAMING -->
+  <section class="category" id="gaming">
+    <div class="cat-head">
+      <p class="eyebrow">CAT / 05</p>
+      <h2>Gaming Accessories</h2>
+      <p class="cat-desc">Level up your setup with gear built for speed and precision.</p>
+    </div>
+    <div class="product-grid">
+
+      <article class="card" data-tilt>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-strikepad-pro"/></svg></div>
+        <h3>StrikePad Pro Controller</h3>
+        <p class="desc">Wireless controller with programmable back paddles.</p>
+        <div class="card-foot">
+          <span class="price">$69</span>
+          <span class="stock in-stock">In stock</span>
+        </div>
+        <button class="add-cart" data-id="strikepad-pro" data-name="StrikePad Pro Controller" data-price="69">Add to cart</button>
+      </article>
+
+      <article class="card" data-tilt>
+        <div class="card-badge badge-new">New</div>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-neonglow-kb"/></svg></div>
+        <h3>NeonGlow Mechanical Keyboard</h3>
+        <p class="desc">Hot-swappable switches with per-key RGB lighting.</p>
+        <div class="card-foot">
+          <span class="price">$129</span>
+          <span class="stock in-stock">In stock</span>
+        </div>
+        <button class="add-cart" data-id="neonglow-kb" data-name="NeonGlow Mechanical Keyboard" data-price="129">Add to cart</button>
+      </article>
+
+      <article class="card" data-tilt>
+        <div class="card-icon"><svg viewBox="0 0 64 64"><use href="#icon-hyperaim-mouse"/></svg></div>
+        <h3>HyperAim Wireless Mouse</h3>
+        <p class="desc">Lightweight shell with a 26,000 DPI precision sensor.</p>
+        <div class="card-foot">
+          <span class="price">$59</span>
+          <span class="stock in-stock">In stock</span>
+        </div>
+        <button class="add-cart" data-id="hyperaim-mouse" data-name="HyperAim Wireless Mouse" data-price="59">Add to cart</button>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark">◈</span> TechZone
+      <p>Gadgets, picked and priced fairly.</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>Shop</h4>
+        <a href="#smartphones">Smartphones</a>
+        <a href="#laptops">Laptops</a>
+        <a href="#audio">Audio</a>
+        <a href="#wearables">Wearables</a>
+        <a href="#gaming">Gaming</a>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <a href="#" id="footerSignIn">Sign in</a>
+        <a href="#" id="footerOrders">Order history</a>
+        <a href="#offers">Special offers</a>
+      </div>
+    </div>
+  </div>
+  <p class="footer-note">Student coursework project — TechZone Gadget Store. Cart and accounts run entirely
+    in your browser for demo purposes; nothing is sent to a real server.</p>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="drawer" id="cartDrawer">
+  <div class="drawer-head">
+    <h3>Your cart</h3>
+    <button class="drawer-close" id="closeCart" aria-label="Close cart">✕</button>
+  </div>
+  <div class="drawer-body" id="cartItems">
+    <p class="empty-msg">Your cart is empty.</p>
+  </div>
+  <div class="drawer-foot">
+    <div class="subtotal-row">
+      <span>Subtotal</span>
+      <span id="cartSubtotal">$0</span>
+    </div>
+    <button class="btn btn-primary full" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+
+<!-- ============ ACCOUNT PANEL ============ -->
+<aside class="drawer" id="acctDrawer">
+  <div class="drawer-head">
+    <h3 id="acctDrawerTitle">Sign in</h3>
+    <button class="drawer-close" id="closeAcct" aria-label="Close account panel">✕</button>
+  </div>
+
+  <div class="drawer-body" id="authView">
+    <div class="auth-tabs">
+      <button class="tab-btn active" data-tab="signin">Sign in</button>
+      <button class="tab-btn" data-tab="signup">Sign up</button>
+    </div>
+
+    <form id="signinForm" class="auth-form">
+      <label>Email
+        <input type="email" name="email" required placeholder="you@example.com">
+      </label>
+      <label>Password
+        <input type="password" name="password" required placeholder="••••••••" minlength="4">
+      </label>
+      <p class="form-error" id="signinError"></p>
+      <button type="submit" class="btn btn-primary full">Sign in</button>
+    </form>
+
+    <form id="signupForm" class="auth-form hidden">
+      <label>Name
+        <input type="text" name="name" required placeholder="Your name">
+      </label>
+      <label>Email
+        <input type="email" name="email" required placeholder="you@example.com">
+      </label>
+      <label>Password
+        <input type="password" name="password" required placeholder="At least 4 characters" minlength="4">
+      </label>
+      <p class="form-error" id="signupError"></p>
+      <button type="submit" class="btn btn-primary full">Create account</button>
+    </form>
+  </div>
+
+  <div class="drawer-body hidden" id="accountView">
+    <div class="acct-summary">
+      <div class="acct-avatar" id="acctAvatar">?</div>
+      <div>
+        <p class="acct-name" id="acctName">—</p>
+        <p class="acct-email" id="acctEmail">—</p>
+      </div>
+    </div>
+
+    <h4 class="section-label">Purchase history</h4>
+    <div id="orderHistory" class="order-history">
+      <p class="empty-msg">No orders yet.</p>
+    </div>
+
+    <button class="btn btn-ghost full" id="logoutBtn">Log out</button>
+  </div>
+</aside>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
